@@ -65,16 +65,14 @@ JButton energyBtn = new JButton("Energy Report");
 energyBtn.setBounds(150, 100, 150, 40);
 
 frame.add(energyBtn);
-energyBtn.addActionListener(e -> {
 
-    double totalPower = hub.getTotalPower();
-
-    area.setText(
-            "ENERGY REPORT\n\n" +
-            "Total Connected Power : " +
-            totalPower + " W");
+energyBtn.addActionListener(event -> 
+    {
+area.setText(hub.getEnergyReport());
 
 });
+
+
 JButton ruleBtn = new JButton("View Rules");
 ruleBtn.setBounds(150, 200, 150, 40);
 

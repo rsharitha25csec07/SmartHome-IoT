@@ -35,6 +35,19 @@ public double getTotalPower() {
 
     return total;
 }
+public String getEnergyReport() {
+    String report = "ENERGY REPORT\n\n";
+
+    for (SmartDevice device : devices) {
+        report += device.getDeviceName() + " : "
+                + device.getPowerRating() + " W\n";
+    }
+
+    report += "\nTotal Power : " + getTotalPower() + " W";
+
+    return report;
+}
+
 
     public String getHubName() {
         return hubName;
